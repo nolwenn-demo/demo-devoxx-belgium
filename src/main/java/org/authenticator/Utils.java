@@ -55,10 +55,5 @@ public class Utils {
       MatrixToImageWriter.writeToStream(matrix, "png", out);
     }
   }
-  public List<User> retrieveUsers(HttpServletRequest request) throws IOException {
-    var coder = new BeanXMLByteCoder();
-    List<User> newUsers;
-    newUsers = (List<User>) coder.decode(request.getInputStream());
-    return newUsers;
-  }
+
 }
