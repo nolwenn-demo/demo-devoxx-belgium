@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id "org.sonarqube" version "4.3.1.3277"
+    id "jacoco"
 }
 
 group = 'org.example'
@@ -27,6 +28,12 @@ sonar {
         property "sonar.projectKey", "nolwenn-demo_demo-devoxx-belgium"
         property "sonar.organization", "nolwenn-demo"
         property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
     }
 }
 
