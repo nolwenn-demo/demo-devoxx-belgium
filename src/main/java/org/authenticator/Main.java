@@ -17,7 +17,6 @@ public class Main {
     String barCodeUrl = Utils.getGoogleAuthenticatorBarCode(secretKey, email, companyName);
     Utils.createQRCode(barCodeUrl, "QRCode.png", 400, 400);
 
-
     logger.info("Please enter 2fA code here -> ");
     Scanner scanner = new Scanner(System.in);
     String code = scanner.nextLine();
@@ -26,5 +25,6 @@ public class Main {
     } else {
       logger.info("Invalid 2FA Code");
     }
+    logger.info("The end");
   }
 }
